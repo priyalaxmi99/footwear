@@ -1,0 +1,19 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Mail</th>
+		<th>Job</th>
+		<th>Message</th>
+	</tr>
+
+	{% for i in obj %}
+		<tr>
+			<td>{{ i.u_name }}</td>
+			<td>{{ i.u_mail }}</td>
+			<td>{{ i.u_job }}</td>
+			<td>{{ i.u_msg }}</td>
+			</tr>
+	{% endfor %}
+</table>
+
+<a href="{% url 'pathvalue' 12 %}">click me</a>

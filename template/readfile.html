@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="POST">
+	{% csrf_token %}
+	<input type="text" name="usermail">
+	<input type="submit" value="submit">
+	
+	{{ obj_file.u_name }}
+	{{ obj_file.u_mail }}
+	{{ obj_file.u_job }}
+	{{ obj_file.u_msg }}
+
+	
+	
+</form>
+{% endblock %}

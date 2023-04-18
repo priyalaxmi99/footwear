@@ -1,0 +1,19 @@
+<h3>Get Data</h3>
+<form method="POST">
+	{% csrf_token %}
+	<input type="hidden" name="form_name" value="form1">
+	<input type="text" name="usermail">
+	<input type="submit" value="submit">
+</form>
+<h3>Update data in DB</h3>
+<form method="POST">
+	{% csrf_token %}
+	<input type="hidden" name="form_name" value="form2">
+
+	<input type="text" name="username" value="{{ obj_form.u_name }}"></br>
+	<input type="text" name="usermail" value="{{ obj_form.u_mail }}"></br>
+	<input type="text" name="userjob" value="{{ obj_form.u_job }}"></br>
+	<input type="text" name="message" value="{{ obj_form.u_msg }}"></br>
+
+	<input type="submit" value="Update">
+</form>
